@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+  <head>
+        <title> document</title>
+</head>
+    <body id="b">
+        <h1>Form events </h1>
+        <hr/>
+        <h3>Square and cube</h3>
+        <label>Enter a number:</label>
+        <input type="number" id="number" onchange="squarecube()">
+        <p id="solution"></p>
+        <hr>
+        <h3>pick a colour to change the page background</h3>
+        <input type="color" id="color" onchange="setBgcolor()">
+        <script>
+            function squarecube()
+            {
+                var x =parseInt(document.getElementById("number").value);
+                var square = x**2;
+                var cube = x**3;
+                console.log(x);
+                console.log(square);
+                document.getElementById("solution").innerHTML='<b>square of '+x+' is:</b>'+square+'<br/> <b> cube of '+x+' is:</b>'+cube;
+  }
+ function setBgcolor()
+  {
+var color = document.getElementById("color").value;
+                document.getElementById("b").style.backgroundColor=color
+            }
+             </script>
+        </body>
+</html>
+

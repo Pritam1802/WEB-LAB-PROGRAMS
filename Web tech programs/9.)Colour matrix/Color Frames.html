@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Introduction to JavaScript</title>
+    
+    <style>
+      
+      .grid{
+      display: flex;
+      }
+      
+      .box{
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+
+      }
+      
+      h5{
+        cursor: pointer;
+      }
+      
+    </style>
+    
+  </head>
+  <body id="body">
+    
+    <h3>Click your desired color and fill the grid</h3>
+  
+    <h5 onclick="setPenColor('red')">Red</h5>
+    <h5 onclick="setPenColor('green')">Green</h5>
+    <h5 onclick="setPenColor('blue')">Blue</h5>
+  
+    <div class="grid">
+     <div class="box" onclick="setBgColor(this)"></div>
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+    </div>
+    <div class="grid">
+     <div class="box" onclick="setBgColor(this)"></div>
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+    </div>
+    <div class="grid">
+     <div class="box" onclick="setBgColor(this)"></div>
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+     <div class="box" onclick="setBgColor(this)"></div> 
+    </div>
+    
+  
+    <script>
+      
+      var penColor = 'black';
+      
+      function setPenColor(pen)
+      {
+        penColor = pen;
+      }
+      
+      function setBgColor(boxColor)
+      {
+        boxColor.style.backgroundColor = penColor;
+      }
+      
+    </script>
+    
+  </body>
+</html>

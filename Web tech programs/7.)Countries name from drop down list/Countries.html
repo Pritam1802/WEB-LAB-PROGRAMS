@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>countries</title>
+    <style>
+        p
+        {
+            font-size: x-large;
+            color: orangered;
+        }
+        body{
+            background-color: whitesmoke;
+}
+        h4{
+            font-size:large;
+  }
+ </style>
+</head>
+<body>
+    <h3><u> COUNTRIES</u> </h3>
+    <label>select a country</label>
+    <select name="country" id="c" onchange="conname()">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Russia"> Russia</option>
+        <option value="UK">UK</option>
+        <option value="Africa">Africa</option>
+        <option value="UAE">UAE</option>
+        </select>
+        <p id="d"></p>
+        <script>
+            function conname()
+            {
+                var count =document.getElementById("c").value;
+                console.log(count);
+                document.getElementById("d").innerHTML=count;
+  }
+        </script>
+</body>
+</html>
